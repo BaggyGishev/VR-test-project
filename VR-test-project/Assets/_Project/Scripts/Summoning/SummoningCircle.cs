@@ -37,6 +37,7 @@ public class SummoningCircle : MonoBehaviour
         await Task.Delay(1500);
         summoningVFXObject.SetActive(true);
         await Task.Delay(500);
+        foreach (var placeholder in placeholders) Destroy(placeholder.Gem.gameObject);
         npcObject.SetActive(true);
     }
 }
