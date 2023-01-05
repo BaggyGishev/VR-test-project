@@ -1089,6 +1089,7 @@ GameObject:
   - component: {fileID: 995536167}
   - component: {fileID: 995536171}
   - component: {fileID: 995536172}
+  - component: {fileID: 995536173}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -1356,6 +1357,19 @@ MonoBehaviour:
   m_PlayHapticsOnHoverCanceled: 0
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
+--- !u!135 &995536173
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995536166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07
+  m_Center: {x: 0.025, y: -0.03, z: -0.03}
 --- !u!1 &1023464347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,7 +1966,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!1 &1318182590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,6 +1978,7 @@ GameObject:
   - component: {fileID: 1318182591}
   - component: {fileID: 1318182595}
   - component: {fileID: 1318182596}
+  - component: {fileID: 1318182597}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -2231,6 +2246,19 @@ MonoBehaviour:
   m_PlayHapticsOnHoverCanceled: 0
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
+--- !u!135 &1318182597
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318182590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.07
+  m_Center: {x: -0.025, y: -0.03, z: -0.03}
 --- !u!1001 &1319525815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2714,7 +2742,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!1001 &1673113717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3006,7 +3034,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!1 &2146788678
 GameObject:
   m_ObjectHideFlags: 0
