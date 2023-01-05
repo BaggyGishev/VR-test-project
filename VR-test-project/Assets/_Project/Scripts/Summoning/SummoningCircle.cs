@@ -6,7 +6,8 @@ public class SummoningCircle : MonoBehaviour
 {
     [SerializeField] private GemPlaceholder[] placeholders;
     [SerializeField] private GameObject summoningVFXObject;
-    
+    [SerializeField] private GameObject npcObject;
+
     private bool _isSummoned;
 
     private void OnEnable()
@@ -31,9 +32,11 @@ public class SummoningCircle : MonoBehaviour
 
     private async void Summon()
     {
-        await Task.Delay(1500);
-        Debug.Log("Summon");
-        summoningVFXObject.SetActive(true);
         _isSummoned = true;
+
+        await Task.Delay(1500);
+        summoningVFXObject.SetActive(true);
+        await Task.Delay(500);
+        npcObject.SetActive(true);
     }
 }
