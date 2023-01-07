@@ -10,10 +10,16 @@ public class TurretController : MonoBehaviour
     [SerializeField] private float shootForce = 55f;
     [SerializeField] private float shootDelay = 1.5f;
     [SerializeField] private ParticleSystem shootVFX;
-
-
+    [SerializeField] private AudioClip shootClip;
+    
+    private AudioSource _audioSource;
     private bool _isReloaded = true;
     private int _yDir;
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     public void OnRotateLeft()
     {
@@ -52,6 +58,7 @@ public class TurretController : MonoBehaviour
         shootVFX.Play();
 
         StartCoroutine(ReloadingRoutine());
+        _audioSource.PlayOneShot(shootClip);
     }
 
     private IEnumerator RotationRoutine(float yDir)

@@ -8,7 +8,15 @@ public class SummoningCircle : MonoBehaviour
     [SerializeField] private GameObject summoningVFXObject;
     [SerializeField] private GameObject npcObject;
 
+    [SerializeField] private AudioClip transformationClip;
+
+    private AudioSource _audioSource;
     private bool _isSummoned;
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnEnable()
     {
@@ -35,6 +43,7 @@ public class SummoningCircle : MonoBehaviour
         _isSummoned = true;
 
         await Task.Delay(1500);
+        _audioSource.PlayOneShot(transformationClip);
         summoningVFXObject.SetActive(true);
         await Task.Delay(500);
         foreach (var placeholder in placeholders) Destroy(placeholder.Gem.gameObject);
