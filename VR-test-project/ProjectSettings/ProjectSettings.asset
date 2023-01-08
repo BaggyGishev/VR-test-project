@@ -135,7 +135,11 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: 58511f7c5d64afc42a10d15019259434, type: 2}
+  - {fileID: -6940646641546910238, guid: bc447478ed684b948b3626f0a42bac61, type: 2}
+  - {fileID: -186647773379757199, guid: 3754ed75c1c06b442a23307eef0c5178, type: 2}
+  - {fileID: 11400000, guid: fa33f26a2d57d8d49b99e736dc8ddb9c, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -720,7 +724,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 2
+  selectedPlatform: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
